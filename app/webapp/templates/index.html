@@ -1,20 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 {% block todo_block %}
-<div class="todo_block">
-    <div class="todo_head">
-        <div class="head_block">
-            <h2 class="task_title">Список задач</h2>
-        </div>
+<div class="todo_head">
+    <div class="head_block">
+        <h2 class="task_title">Список задач</h2>
     </div>
-    <div class="todo_body">
-        <ul class="todo_list">
-            {% for task in tasks %}
-            <li class="todo_item">
-                <a class="todo_item_link" href="{% url 'task_view' task.pk %}">{{task.summary}}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+</div>
+<div class="todo_body">
+    <ul class="todo_list">
+        {% for task in tasks %}
+        <li class="todo_item">
+            <a class="todo_item_link" href="{% url 'task_view' task.pk %}">{{task.summary}}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}

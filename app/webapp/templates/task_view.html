@@ -8,13 +8,14 @@
         </div>
     </div>
     <div class="todo_body">
-        <ul class="todo_list">
-            {% for task in tasks %}
-            <li class="todo_item">
-                <a class="todo_item_link" href="{% url 'task_view' task.pk %}">{{task.summary}}</a>
-            </li>
-            {% endfor %}
-        </ul>
+        <div class="task_body">
+            <p>{{ task.description }}</p>
+            <div class="task_footer">
+                <p><b>Статус: </b>{{ task.status }}</p>
+                <p><b>Тип: </b>{{ task.type }}</p>
+                <p><b>Создано: </b>{{ task.created_at }}</p>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
