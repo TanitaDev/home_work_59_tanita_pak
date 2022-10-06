@@ -1,0 +1,122 @@
+[
+{
+  "model": "webapp.task",
+  "pk": 1,
+  "fields": {
+    "summary": "Сделать дз №57",
+    "description": "сделать домашнее задание №57. Доделать 2, 3 этап",
+    "status": 2,
+    "type": 1,
+    "created_at": "2022-10-06T17:15:35.731Z",
+    "updated_at": "2022-10-06T17:15:35.731Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 2,
+  "fields": {
+    "summary": "Уборка",
+    "description": "Убраться дома до 18.00",
+    "status": 1,
+    "type": 3,
+    "created_at": "2022-10-06T17:16:15.216Z",
+    "updated_at": "2022-10-06T17:16:15.216Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 3,
+  "fields": {
+    "summary": "Чистка ПК",
+    "description": "Очистить ПК от лишнего",
+    "status": 3,
+    "type": 3,
+    "created_at": "2022-10-06T17:16:47.854Z",
+    "updated_at": "2022-10-06T17:16:47.854Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 4,
+  "fields": {
+    "summary": "Чтение книги",
+    "description": "Прочитать книгу \"Чисты Код\"",
+    "status": 2,
+    "type": 2,
+    "created_at": "2022-10-06T17:17:41.698Z",
+    "updated_at": "2022-10-06T17:22:02.856Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 5,
+  "fields": {
+    "summary": "Документы",
+    "description": "Забрать документы",
+    "status": 1,
+    "type": 1,
+    "created_at": "2022-10-06T17:18:10.855Z",
+    "updated_at": "2022-10-06T17:18:10.855Z"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 1,
+  "fields": {
+    "name": "новый"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 2,
+  "fields": {
+    "name": "в процессе"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 3,
+  "fields": {
+    "name": "выполнено"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "name": "задача"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "name": "ошибка"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "name": "улучшение"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$IDCaRO0j5WgNcGxil0NITw$DXpno5GcTFyQpvzxE8vc31QBtHQNLORiZ1x/1/lxzpg=",
+    "last_login": "2022-10-06T17:11:53.288Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-06T17:11:46.678Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
