@@ -41,11 +41,11 @@ input {
 }
 
 body {
-    background: #FFFFCC;
+    background: #fdfdb1;
 }
 
 .wrapper {
-    padding: 30px 20px;
+    padding: 50px 20px;
     display: flex;
     justify-content: center;
 }
@@ -72,6 +72,13 @@ body {
 .todo_item_link {
     padding: 10px 10px;
     display: block;
+    font-size: 18px;
+    color: #000000;
+    transition: all ease 0.3s;
+}
+
+.todo_item_link:hover{
+    color: rgba(36,174,174,1);
 }
 
 .task_title {
@@ -101,4 +108,27 @@ p{
 
 .task_footer p:nth-child(2) {
     margin-bottom: 15px;
+}
+
+.header_body {
+    padding: 20px 50px 0px 50px;
+}
+
+.header_body a {
+    display: inline-block;
+    color: rgb(21 124 124);
+    font-size: 18px;
+    margin-bottom: 13px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.header_body a:hover {
+    -webkit-transform: translateX(7px);
+    -ms-transform: translateX(7px);
+    transform: translateX(7px);
+}
+
+i {
+    margin-right: 8px;
 }
