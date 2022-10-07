@@ -24,4 +24,5 @@ urlpatterns = [
     path('<int:task_pk>/', TaskView.as_view(), name='task_view'),
     path('add/', add_view, name='add'),
     path('edit/<int:pk>/', edit_view, name='edit'),
+    path('delete/<int:pk>/', delete_view, name='delete'),
 ]

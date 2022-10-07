@@ -64,8 +64,23 @@ body {
     border-radius: 0px 0px 10px 10px;
 }
 
+.todo_item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed;
+}
+
+.todo_item a {
+    display: flex;
+    align-items: center;
+}
+
+.todo_item i {
+    color: rgba(36,174,174,1);
+}
+
 .todo_item_link {
-    padding: 10px 10px;
+    padding: 15px 10px;
     display: block;
     font-size: 18px;
     color: #000000;
@@ -156,11 +171,20 @@ i {
 }
 
 .btn {
-    background: rgba(36,174,174,1);
     color: #ffffff;
     padding: 15px 20px;
     border-radius: 10px;
     font-size: 17px;
+    cursor: pointer;
+    margin: 0px 8px;
+}
+
+.btn.green {
+    background: rgb(34 166 166);
+}
+
+.btn.red {
+    background: #ef5656;
 }
 
 .task_icon {
@@ -180,4 +204,9 @@ i {
 
 .task_icon span {
     font-size: 14px;
+}
+
+.delete_btn form {
+    display: flex;
+    justify-content: center;
 }

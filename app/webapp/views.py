@@ -67,3 +67,11 @@ def edit_view(request, pk):
     }
     return render(request, 'edit.html', context)
 
+
+def delete_view(request, pk):
+    tasks = get_object_or_404(Task, pk=pk)
+    if request.method == "GET":
+        return render(request, 'delete.html', context={'tasks': tasks})
+    elif request.method == "POST":
+        tasks.delete()
+        return redirect('index')

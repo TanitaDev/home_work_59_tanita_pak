@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block todo_block %}
+<div class="todo_head">
+    <div class="head_block">
+        <h2 class="task_title">Вы точно хотите удалить задачу?</h2>
+    </div>
+</div>
+<div class="todo_body">
+    <div class="delete_btn">
+        <form action="{% url 'delete' tasks.pk %}" method="POST">
+            {% csrf_token %}
+            <a class="btn red" href="{% url 'index' %}">Нет</a>
+            <input class="btn green" type="submit" value="Да">
+        </form>
+    </div>
+</div>
+{% endblock %}

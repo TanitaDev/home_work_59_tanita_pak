@@ -11,6 +11,7 @@
         {% for task in tasks %}
         <li class="todo_item">
             <a class="todo_item_link" href="{% url 'task_view' task.pk %}">{{task.summary}}</a>
+            <a href="{% url 'delete' task.pk%}"><i class="fa-solid fa-trash"></i></a>
         </li>
         {% endfor %}
     </ul>
