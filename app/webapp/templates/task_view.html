@@ -4,7 +4,7 @@
 <div class="task_block">
      <div class="todo_head">
         <div class="head_block">
-            <h2 class="task_title">{{ task.summary }}</h2>
+            <h2 class="task_title task_icon">{{ task.summary }} <a href="{% url 'edit' task.pk %}"><i class="fa-solid fa-pen-to-square"></i><span>редактировать</span></a></h2>
         </div>
     </div>
     <div class="todo_body">

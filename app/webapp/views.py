@@ -25,7 +25,7 @@ class TaskView(TemplateView):
 
 def add_view(request):
     if request.method == "POST":
-        form = AddTaskForm(request.POST)
+        form = TaskForm(request.POST)
         if form.is_valid():
             try:
                 summary = form.cleaned_data.get("summary")
@@ -38,8 +38,32 @@ def add_view(request):
                 form.add_error(None, 'Ошибка добавления задачи')
 
     else:
-        form = AddTaskForm()
+        form = TaskForm()
     context = {
         'form': form
     }
     return render(request, 'add.html', context)
+
+
+def edit_view(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    if request.method == "POST":
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            try:
+                task.summary = form.cleaned_data.get("summary")
+                task.description = form.cleaned_data.get("description")
+                task.status = form.cleaned_data.get("status")
+                task.type = form.cleaned_data.get("type")
+                task.save()
+                return redirect('task_view', pk=task.pk)
+            except:
+                form.add_error(None, 'Ошибка редактирования задачи')
+
+    else:
+        form = TaskForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'edit.html', context)
+

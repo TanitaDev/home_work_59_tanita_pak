@@ -53,9 +53,9 @@ body {
 }
 
 .todo_head {
-    background: linear-gradient(90deg, rgba(130,189,189,1) 0%, rgba(36,174,174,1) 35%, rgba(6,75,75,1) 100%);
+    background: linear-gradient(90deg, rgb(99 171 171) 0%, rgba(36,174,174,1) 35%, rgba(6,75,75,1) 100%);
     border-radius: 10px 10px 0px 0px;
-    padding: 15px 15px;
+    padding: 18px 15px;
 }
 
 .todo_body {
@@ -161,4 +161,23 @@ i {
     padding: 15px 20px;
     border-radius: 10px;
     font-size: 17px;
+}
+
+.task_icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task_icon a {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.task_icon i {
+    font-size: 18px;
+}
+
+.task_icon span {
+    font-size: 14px;
 }

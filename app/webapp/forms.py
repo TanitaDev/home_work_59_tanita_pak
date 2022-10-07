@@ -2,7 +2,7 @@ from django import forms
 from .models import *
 
 
-class AddTaskForm(forms.Form):
+class TaskForm(forms.Form):
     summary = forms.CharField(max_length=200, label="Заголовок", widget=forms.TextInput(attrs={'class': 'input'}))
     description = forms.CharField(widget=forms.Textarea(attrs={'cols': 60, 'rows': 5, 'class': 'input'}),
                                   label="Описание")
