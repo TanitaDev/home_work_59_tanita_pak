@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/icons8-task-100.png' %}"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     <title>Задачи</title>
@@ -12,7 +13,7 @@
     <div class="header_body">
         <ul>
             <li><a href="{% url 'index' %}"><i class="fa-solid fa-house-user"></i> На главную</a></li>
-            <li><a href="{% url 'index' %}"><i class="fa-solid fa-list-check"></i> Добавить задачу</a></li>
+            <li><a href="{% url 'add' %}"><i class="fa-solid fa-list-check"></i> Добавить задачу</a></li>
         </ul>
     </div>
 </header>

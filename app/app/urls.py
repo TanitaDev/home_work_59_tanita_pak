@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
     path('<int:task_pk>/', TaskView.as_view(), name='task_view'),
+    path('add/', add_view, name='add'),
 ]
