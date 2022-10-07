@@ -1,0 +1,24 @@
+{% csrf_token %}
+
+<div class="form_error">{{ form.non_field_errors }}</div>
+<p>
+    <label class="form_label" for="{{ form.summary.id_for_label }}">{{ form.summary.label }}</label>
+    {{ form.summary }}
+<div class="form_error">{{ form.summary.errors }}</div>
+</p>
+<p>
+    <label class="form_label" for="{{ form.description.id_for_label }}">{{ form.description.label }}</label>
+    {{ form.description }}
+<div class="form_error">{{ form.description.errors }}</div>
+</p>
+<p>
+    <label class="form_label" for="{{ form.status.id_for_label }}">{{ form.status.label }}</label>
+    {{ form.status }}
+<div class="form_error">{{ form.status.errors }}</div>
+</p>
+<p>
+    <label class="form_label" for="{{ form.type.id_for_label }}">{{ form.type.label }}</label>
+    {{ form.type }}
+<div class="form_error">{{ form.type.errors }}</div>
+</p>
+<button class="btn green" type="submit">{{ btn_text }}</button>
