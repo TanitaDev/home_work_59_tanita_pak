@@ -2,16 +2,16 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 from webapp.forms import *
 from webapp.models import *
-from django.views.generic import View, TemplateView, RedirectView
+from django.views.generic import View, TemplateView, RedirectView, ListView
 
 
-class IndexView(View):
-    def get(self, request, *args, **kwargs):
-        tasks = Task.objects.all()
-        context = {
-            'tasks': tasks
-        }
-        return render(request, 'index.html', context)
+class IndexView(ListView):
+    template_name = "index.html"
+    context_object_name = "tasks"
+    model = Task
+
+    paginate_by = 10
+    paginate_orphans = 1
 
 
 class TaskView(TemplateView):

@@ -16,5 +16,10 @@
         </li>
         {% endfor %}
     </ul>
+    {% if is_paginated %}
+    <div class="pagination_block">
+        {% include 'partial/pagination.html' %}
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
