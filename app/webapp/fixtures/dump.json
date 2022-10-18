@@ -37,18 +37,6 @@
 },
 {
   "model": "webapp.task",
-  "pk": 4,
-  "fields": {
-    "summary": "Чтение книги",
-    "description": "Прочитать книгу \"Чисты Код\"",
-    "status": 2,
-    "type": 2,
-    "created_at": "2022-10-06T17:17:41.698Z",
-    "updated_at": "2022-10-06T17:22:02.856Z"
-  }
-},
-{
-  "model": "webapp.task",
   "pk": 5,
   "fields": {
     "summary": "Документы",
@@ -57,6 +45,126 @@
     "type": 1,
     "created_at": "2022-10-06T17:18:10.855Z",
     "updated_at": "2022-10-06T17:18:10.855Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 6,
+  "fields": {
+    "summary": "Доделать дз 59",
+    "description": "описание дз 59",
+    "status": 2,
+    "type": 1,
+    "created_at": "2022-10-18T22:50:22.943Z",
+    "updated_at": "2022-10-18T22:50:22.943Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 7,
+  "fields": {
+    "summary": "Установить линукс",
+    "description": "поставить линукс второй системой (или основной)",
+    "status": 1,
+    "type": 3,
+    "created_at": "2022-10-18T22:51:32.054Z",
+    "updated_at": "2022-10-18T22:51:32.054Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 8,
+  "fields": {
+    "summary": "сделать дз 58",
+    "description": "описание к дз 58",
+    "status": 1,
+    "type": 1,
+    "created_at": "2022-10-18T22:52:00.921Z",
+    "updated_at": "2022-10-18T22:52:00.921Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 9,
+  "fields": {
+    "summary": "базовые представления",
+    "description": "разобрать базовые представления лучше",
+    "status": 1,
+    "type": 1,
+    "created_at": "2022-10-18T22:52:39.443Z",
+    "updated_at": "2022-10-18T22:52:39.443Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 10,
+  "fields": {
+    "summary": "Чтение книги",
+    "description": "Прочитать книгу \"Чистый код\"",
+    "status": 2,
+    "type": 3,
+    "created_at": "2022-10-18T22:54:18.884Z",
+    "updated_at": "2022-10-18T22:54:18.884Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 11,
+  "fields": {
+    "summary": "Сон",
+    "description": "поменять режим сна",
+    "status": 2,
+    "type": 3,
+    "created_at": "2022-10-18T23:07:28.992Z",
+    "updated_at": "2022-10-18T23:07:28.992Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 12,
+  "fields": {
+    "summary": "КС ГО",
+    "description": "поддянуть aim, strafe",
+    "status": 2,
+    "type": 3,
+    "created_at": "2022-10-18T23:09:15.026Z",
+    "updated_at": "2022-10-18T23:09:15.026Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 13,
+  "fields": {
+    "summary": "ООП",
+    "description": "подтяуть ООП (миксины)",
+    "status": 1,
+    "type": 3,
+    "created_at": "2022-10-18T23:09:51.560Z",
+    "updated_at": "2022-10-18T23:09:51.560Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 14,
+  "fields": {
+    "summary": "БД",
+    "description": "повторно разобрать темы БД",
+    "status": 1,
+    "type": 3,
+    "created_at": "2022-10-18T23:10:17.697Z",
+    "updated_at": "2022-10-18T23:10:17.697Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 15,
+  "fields": {
+    "summary": "Косметика",
+    "description": "купить помаду nyx",
+    "status": 1,
+    "type": 3,
+    "created_at": "2022-10-18T23:11:47.356Z",
+    "updated_at": "2022-10-18T23:11:47.356Z"
   }
 },
 {

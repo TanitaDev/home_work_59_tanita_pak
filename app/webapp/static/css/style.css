@@ -121,7 +121,9 @@ p{
 }
 
 .header_body {
-    padding: 20px 60px 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px 0px 60px;
 }
 
 .header_body a {
@@ -254,4 +256,14 @@ i {
     border-radius: 5px;
     text-align: center;
     border: solid 1px gray;
+}
+
+.form_block input {
+    padding: 8px 22px;
+}
+
+.form_block .search_input {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 8px 13px;
 }

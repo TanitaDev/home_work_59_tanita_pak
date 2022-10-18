@@ -11,3 +11,8 @@ class TaskForm(forms.Form):
                                     widget=forms.Select(attrs={'class': 'input'}))
     type = forms.ModelChoiceField(queryset=Type.objects.all(), label="Тип", empty_label='Тип не выбран',
                                   widget=forms.Select(attrs={'class': 'input'}))
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=100, required=False, label="Найти",
+                             widget=forms.TextInput(attrs={'class': 'search_input', 'value': ''}))
