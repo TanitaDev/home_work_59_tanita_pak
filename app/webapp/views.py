@@ -85,9 +85,6 @@ class ProjectView(ListView):
     context_object_name = "tasks"
     template_name = "projects.html"
 
-    # def get(self, request, *args, **kwargs):
-    #     return render(request, 'projects.html', {'projects': Project.objects.all()})
-
     def get_context_data(self, **kwargs):
         context = super(ProjectView, self).get_context_data(**kwargs)
         context['projects'] = Project.objects.all()

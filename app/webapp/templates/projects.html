@@ -13,7 +13,10 @@
         <p class="project_title">{{ p.name }}</p>
         <p class="task_label">Задачи:</p>
         {% for task in p.project.all %}
-        <li class="tasks_list_item">{{ task.summary }}</li>
+        <li class="tasks_list_item">
+            <a class="task_trash_icon" href="{% url 'delete' task.pk %}"><i class="fa-solid fa-trash"></i></a>
+            <a class="task_item" href="{% url 'task_view' task.pk %}">{{ task.summary }}</a>
+        </li>
         {% endfor %}
     </ul>
     {% endfor %}

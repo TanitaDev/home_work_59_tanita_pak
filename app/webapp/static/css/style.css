@@ -77,6 +77,12 @@ body {
 
 .todo_item i {
     color: rgba(36,174,174,1);
+    transition: all ease 0.2s;
+    font-size: 16px;
+}
+
+.todo_item i:hover {
+    color: #CC3333;
 }
 
 .todo_item_link {
@@ -288,17 +294,44 @@ i {
 
 .project_title {
     font-size: 22px;
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 17px 0px;
     font-weight: bold;
 }
 
 .task_label {
     font-size: 20px;
-    margin: 0px 0px 7px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 .tasks_list_item {
-    margin: 0px 0px 4px 20px;
+    display: flex;
+    margin: 0px 0px 9px 20px;
     font-size: 18px;
-    list-style-type: circle;
+}
+
+.tasks_list_item .task_item {
+    display: block;
+    color: black;
+    transition: all ease 0.2s;
+}
+
+.tasks_list_item .task_item:hover {
+    color: rgb(21 124 124);
+    -webkit-transform: translateX(7px);
+    -ms-transform: translateX(7px);
+    transform: translateX(7px);
+}
+
+.task_trash_icon {
+    margin: 0px 8px 0px 0px;
+}
+
+.task_trash_icon i {
+    font-size: 15px;
+    color: #000000;
+    transition: all ease 0.1s;
+}
+
+.task_trash_icon i:hover {
+    color: #CC3333;
 }
