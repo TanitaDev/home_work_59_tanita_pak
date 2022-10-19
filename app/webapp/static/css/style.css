@@ -267,3 +267,16 @@ i {
     border-radius: 7px;
     padding: 8px 13px;
 }
+
+.todo_item.no_dashed {
+    border-bottom: none;
+}
+
+.todo_item.no_dashed .todo_item_link {
+    padding-left: 0;
+}
+
+.todo_list.dashed {
+    border-bottom: 1px dashed;
+    padding-bottom: 10px;
+}

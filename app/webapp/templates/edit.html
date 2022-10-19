@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="todo_body">
-    <form class="todo_form" action="{% url 'add' %}" method="post">
+    <form class="todo_form" action="{% url 'edit' task.pk %}" method="post">
         {% include 'partial/task_form.html' with btn_text='Редактировать' %}
     </form>
 </div>

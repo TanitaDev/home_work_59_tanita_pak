@@ -9,7 +9,7 @@
 </div>
 <div class="todo_body">
     <div class="delete_btn">
-        <form action="{% url 'delete' tasks.pk %}" method="POST">
+        <form action="{% url 'delete' task.pk %}" method="POST">
             {% csrf_token %}
             <a class="btn red" href="{% url 'index' %}">Нет</a>
             <input class="btn green" type="submit" value="Да">

@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
 from django.utils.http import urlencode
+from django.urls import reverse, reverse_lazy
 
 from webapp.forms import *
 from webapp.models import *
-from django.views.generic import View, TemplateView, RedirectView, ListView
+from django.views.generic import View, ListView, TemplateView, DetailView, CreateView, UpdateView, DeleteView
 
 
 class IndexView(ListView):
@@ -48,59 +49,36 @@ class TaskView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['task'] = get_object_or_404(Task, pk=kwargs['task_pk'])
+        context['task'] = get_object_or_404(Task, pk=kwargs['pk'])
         return context
 
 
-def add_view(request):
-    if request.method == "POST":
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            try:
-                summary = form.cleaned_data.get("summary")
-                description = form.cleaned_data.get("description")
-                status = form.cleaned_data.get("status")
-                type = form.cleaned_data.get("type")
-                Task.objects.create(summary=summary, description=description, status=status, type=type)
-                return redirect('index')
-            except:
-                form.add_error(None, 'Ошибка добавления задачи')
+class TaskCreate(CreateView):
+    template_name = "add.html"
+    model = Task
+    form_class = TaskForm
 
-    else:
-        form = TaskForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'add.html', context)
+    def get_success_url(self):
+        return reverse('index')
 
 
-def edit_view(request, pk):
-    task = get_object_or_404(Task, pk=pk)
-    if request.method == "POST":
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            try:
-                task.summary = form.cleaned_data.get("summary")
-                task.description = form.cleaned_data.get("description")
-                task.status = form.cleaned_data.get("status")
-                task.type = form.cleaned_data.get("type")
-                task.save()
-                return redirect('task_view', pk=task.pk)
-            except:
-                form.add_error(None, 'Ошибка редактирования задачи')
+class TaskUpdate(UpdateView):
+    template_name = "edit.html"
+    model = Task
+    form_class = TaskForm
 
-    else:
-        form = TaskForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'edit.html', context)
+    def get_success_url(self):
+        return reverse('task_view', kwargs={'pk': self.object.pk})
 
 
-def delete_view(request, pk):
-    tasks = get_object_or_404(Task, pk=pk)
-    if request.method == "GET":
-        return render(request, 'delete.html', context={'tasks': tasks})
-    elif request.method == "POST":
-        tasks.delete()
-        return redirect('index')
+class TaskDelete(DeleteView):
+    template_name = "delete.html"
+    model = Task
+    success_url = reverse_lazy('index')
+
+
+class ProjectView(ListView):
+    template_name = "projects.html"
+    model = Project
+    context_object_name = "projects"
+

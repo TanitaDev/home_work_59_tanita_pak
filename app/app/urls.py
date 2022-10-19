@@ -21,8 +21,9 @@ from webapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
-    path('<int:task_pk>/', TaskView.as_view(), name='task_view'),
-    path('add/', add_view, name='add'),
-    path('edit/<int:pk>/', edit_view, name='edit'),
-    path('delete/<int:pk>/', delete_view, name='delete'),
+    path('<int:pk>/', TaskView.as_view(), name='task_view'),
+    path('add/', TaskCreate.as_view(), name='add'),
+    path('edit/<int:pk>/', TaskUpdate.as_view(), name='edit'),
+    path('delete/<int:pk>/', TaskDelete.as_view(), name='delete'),
+    path('projects', ProjectView.as_view(), name='projects'),
 ]
