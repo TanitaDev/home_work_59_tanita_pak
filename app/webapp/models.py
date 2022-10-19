@@ -8,7 +8,7 @@ class Task(models.Model):
     type = models.ForeignKey('webapp.Type', related_name='task', on_delete=models.PROTECT, verbose_name='Тип')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Время изменения')
-    project = models.ForeignKey('webapp.Project', related_name='proj', on_delete=models.CASCADE,
+    project = models.ForeignKey('webapp.Project', related_name='project', on_delete=models.CASCADE,
                                 verbose_name='Проект',
                                 default=1)
     is_deleted = models.BooleanField(default=False, verbose_name='Удален', null=False,)

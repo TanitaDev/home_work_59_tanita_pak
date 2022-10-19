@@ -14,10 +14,10 @@
         <ul>
             <li><a href="{% url 'index' %}"><i class="fa-solid fa-house-user"></i> На главную</a></li>
             <li><a href="{% url 'add' %}"><i class="fa-solid fa-list-check"></i> Добавить задачу</a></li>
+            <li><a href="{% url 'projects' %}"><i class="fa-solid fa-laptop-code"></i> Проекты</a></li>
         </ul>
-        <div class="form_block">
-            {% include 'partial/search.html' %}
-        </div>
+        {% block header_block %}
+        {% endblock %}
     </div>
 </header>
 <div class="wrapper">

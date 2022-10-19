@@ -80,7 +80,15 @@ class TaskDelete(DeleteView):
 
 
 class ProjectView(ListView):
+    model = Task
+    queryset = Task.objects.all()
+    context_object_name = "tasks"
     template_name = "projects.html"
-    model = Project
-    context_object_name = "projects"
 
+    # def get(self, request, *args, **kwargs):
+    #     return render(request, 'projects.html', {'projects': Project.objects.all()})
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectView, self).get_context_data(**kwargs)
+        context['projects'] = Project.objects.all()
+        return context

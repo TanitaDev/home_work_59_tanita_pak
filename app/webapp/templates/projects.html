@@ -8,18 +8,14 @@
     </div>
 </div>
 <div class="todo_body">
-    <ul class="todo_list dashed">
-        {% for project in projects %}
-        <li class="todo_item no_dashed">
-            <a class="todo_item_link" href="">{{project.name}}</a>
-        </li>
+    {% for p in projects %}
+    <ul class="project_tasks_item dashed">
+        <p class="project_title">{{ p.name }}</p>
+        <p class="task_label">Задачи:</p>
+        {% for task in p.project.all %}
+        <li class="tasks_list_item">{{ task.summary }}</li>
         {% endfor %}
-        <ul>
-            <p>Описание:</p>
-            {% for task in tasks %}
-            <li>{{ task.name }}</li>
-            {% endfor %}
-        </ul>
     </ul>
+    {% endfor %}
 </div>
 {% endblock %}
