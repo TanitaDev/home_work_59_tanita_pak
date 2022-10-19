@@ -11,6 +11,7 @@ class Task(models.Model):
     project = models.ForeignKey('webapp.Project', related_name='proj', on_delete=models.CASCADE,
                                 verbose_name='Проект',
                                 default=1)
+    is_deleted = models.BooleanField(default=False, verbose_name='Удален', null=False,)
 
     def __str__(self):
         return self.summary

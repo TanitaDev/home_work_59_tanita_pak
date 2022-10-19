@@ -8,8 +8,9 @@
     "status": 2,
     "type": 1,
     "created_at": "2022-10-06T17:15:35.731Z",
-    "updated_at": "2022-10-06T17:15:35.731Z",
-    "project": 1
+    "updated_at": "2022-10-19T12:10:26.233Z",
+    "project": 1,
+    "is_deleted": true
   }
 },
 {
@@ -21,8 +22,9 @@
     "status": 1,
     "type": 3,
     "created_at": "2022-10-06T17:16:15.216Z",
-    "updated_at": "2022-10-06T17:16:15.216Z",
-    "project": 1
+    "updated_at": "2022-10-19T12:13:22.442Z",
+    "project": 1,
+    "is_deleted": true
   }
 },
 {
@@ -34,8 +36,9 @@
     "status": 3,
     "type": 3,
     "created_at": "2022-10-06T17:16:47.854Z",
-    "updated_at": "2022-10-06T17:16:47.854Z",
-    "project": 1
+    "updated_at": "2022-10-19T12:13:27.074Z",
+    "project": 1,
+    "is_deleted": true
   }
 },
 {
@@ -48,7 +51,8 @@
     "type": 1,
     "created_at": "2022-10-06T17:18:10.855Z",
     "updated_at": "2022-10-06T17:18:10.855Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -61,7 +65,8 @@
     "type": 1,
     "created_at": "2022-10-18T22:50:22.943Z",
     "updated_at": "2022-10-18T22:50:22.943Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -74,20 +79,8 @@
     "type": 3,
     "created_at": "2022-10-18T22:51:32.054Z",
     "updated_at": "2022-10-18T22:51:32.054Z",
-    "project": 1
-  }
-},
-{
-  "model": "webapp.task",
-  "pk": 8,
-  "fields": {
-    "summary": "сделать дз 58",
-    "description": "описание к дз 58",
-    "status": 1,
-    "type": 1,
-    "created_at": "2022-10-18T22:52:00.921Z",
-    "updated_at": "2022-10-18T22:52:00.921Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -100,7 +93,8 @@
     "type": 1,
     "created_at": "2022-10-18T22:52:39.443Z",
     "updated_at": "2022-10-18T22:52:39.443Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -112,8 +106,9 @@
     "status": 2,
     "type": 3,
     "created_at": "2022-10-18T22:54:18.884Z",
-    "updated_at": "2022-10-18T22:54:18.884Z",
-    "project": 1
+    "updated_at": "2022-10-19T12:10:14.947Z",
+    "project": 1,
+    "is_deleted": true
   }
 },
 {
@@ -126,7 +121,8 @@
     "type": 3,
     "created_at": "2022-10-18T23:07:28.992Z",
     "updated_at": "2022-10-18T23:07:28.992Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -139,7 +135,8 @@
     "type": 3,
     "created_at": "2022-10-18T23:09:15.026Z",
     "updated_at": "2022-10-18T23:17:33.829Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -152,7 +149,8 @@
     "type": 3,
     "created_at": "2022-10-18T23:09:51.560Z",
     "updated_at": "2022-10-18T23:09:51.560Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -165,7 +163,8 @@
     "type": 3,
     "created_at": "2022-10-18T23:10:17.697Z",
     "updated_at": "2022-10-18T23:10:17.697Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -178,7 +177,64 @@
     "type": 3,
     "created_at": "2022-10-18T23:11:47.356Z",
     "updated_at": "2022-10-18T23:11:47.356Z",
-    "project": 1
+    "project": 1,
+    "is_deleted": false
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 16,
+  "fields": {
+    "summary": "инициализировать проект джанго",
+    "description": "инициализировать проект джанго для проекта №61",
+    "status": 1,
+    "type": 1,
+    "created_at": "2022-10-19T10:37:02.662Z",
+    "updated_at": "2022-10-19T10:37:02.662Z",
+    "project": 2,
+    "is_deleted": false
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 17,
+  "fields": {
+    "summary": "ДЗ 59 (3й этап)",
+    "description": "доделать 3й этап",
+    "status": 2,
+    "type": 3,
+    "created_at": "2022-10-19T11:37:24.005Z",
+    "updated_at": "2022-10-19T11:37:24.005Z",
+    "project": 1,
+    "is_deleted": false
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 18,
+  "fields": {
+    "summary": "Сделать дз №58",
+    "description": "сделать домашнее задание №58. Доделать 2, 3 этап",
+    "status": 2,
+    "type": 1,
+    "created_at": "2022-10-19T11:41:41.116Z",
+    "updated_at": "2022-10-19T12:10:08.410Z",
+    "project": 1,
+    "is_deleted": false
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 19,
+  "fields": {
+    "summary": "Прогулка",
+    "description": "Чаще гулять",
+    "status": 1,
+    "type": 3,
+    "created_at": "2022-10-19T12:15:09.385Z",
+    "updated_at": "2022-10-19T12:15:09.385Z",
+    "project": 1,
+    "is_deleted": false
   }
 },
 {
@@ -231,6 +287,16 @@
     "finish_date": null,
     "name": "Проект #59",
     "description": "Добавление базовых классовых представлений и новой модели - Проект"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 2,
+  "fields": {
+    "start_date": "2022-10-18",
+    "finish_date": null,
+    "name": "Проект №61",
+    "description": "сделать аутентификацию"
   }
 },
 {

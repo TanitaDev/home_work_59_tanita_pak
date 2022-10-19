@@ -16,6 +16,8 @@ class IndexView(ListView):
     paginate_by = 10
     paginate_orphans = 1
 
+    queryset = Task.objects.all().filter(is_deleted=False)
+
     def get(self, request, *args, **kwargs):
         self.form = self.get_search_form()
         self.search_value = self.get_search_value()
