@@ -14,6 +14,11 @@ class TypeAdmin(admin.ModelAdmin):
     list_display = ['name']
 
 
+class TypeProject(admin.ModelAdmin):
+    list_display = ['id', 'name', 'start_date', 'finish_date']
+
+
 admin.site.register(Task, TaskAdmin)
 admin.site.register(Status, StatusAdmin)
 admin.site.register(Type, TypeAdmin)
+admin.site.register(Project, TypeProject)
